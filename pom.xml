@@ -9,6 +9,7 @@
     <version>1.0.0-SNAPSHOT</version>
     <modules>
         <module>spring-boot-kotlin-blog</module>
+        <module>spring-boot-kotlin-servletstack</module>
     </modules>
     <packaging>pom</packaging>
 
