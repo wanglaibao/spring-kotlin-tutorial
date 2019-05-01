@@ -5,5 +5,6 @@
 [Spring Boot features Kotlin support] (https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-kotlin.html)
 [Language Support] (https://docs.spring.io/spring/docs/current/spring-framework-reference/languages.html#kotlin)
 
-
-
+[sdeleuze spring-boot开发大牛] (https://github.com/sdeleuze)
+[gregturn spring-boot开发大牛] (https://github.com/gregturn)
+[Spring Operator] (https://github.com/spring-operator)
