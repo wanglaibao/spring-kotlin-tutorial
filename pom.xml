@@ -85,7 +85,7 @@
           <version>${kotlin.version}</version>
           <scope>test</scope>
        </dependency>
-
+       <!--
        <dependency>
           <groupId>org.jetbrains.kotlinx</groupId>
           <artifactId>kotlinx-coroutines-jdk8</artifactId>
@@ -121,7 +121,7 @@
           <artifactId>kotlinx-coroutines-rx2</artifactId>
           <version>${kotlinx.coroutines.version}</version>
        </dependency>
-
+       -->
     </dependencies>
          
     <build>
