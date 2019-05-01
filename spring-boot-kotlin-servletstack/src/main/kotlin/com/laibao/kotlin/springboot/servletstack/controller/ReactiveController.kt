@@ -1,4 +1,4 @@
-package com.laibao.kotlin.springboot.blog.controller
+package com.laibao.kotlin.springboot.servletstack.controller
 
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Deferred

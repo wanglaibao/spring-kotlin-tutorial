@@ -1,4 +1,4 @@
-package com.laibao.kotlin.springboot.blog.configuration
+package com.laibao.kotlin.springboot.servletstack.configuration
 
 import com.laibao.kotlin.springboot.servletstack.entity.Article
 import com.laibao.kotlin.springboot.servletstack.entity.User

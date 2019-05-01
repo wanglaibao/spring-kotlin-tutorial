@@ -1,6 +1,6 @@
 package com.laibao.kotlin.springboot.servletstack
 
-import com.laibao.kotlin.springboot.blog.configuration.BlogProperties
+import com.laibao.kotlin.springboot.servletstack.configuration.BlogProperties
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.boot.runApplication

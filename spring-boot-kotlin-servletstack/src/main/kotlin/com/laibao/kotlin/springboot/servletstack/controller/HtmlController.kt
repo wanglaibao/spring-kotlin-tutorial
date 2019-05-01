@@ -1,6 +1,6 @@
-package com.laibao.kotlin.springboot.blog.controller
+package com.laibao.kotlin.springboot.servletstack.controller
 
-import com.laibao.kotlin.springboot.blog.configuration.BlogProperties
+import com.laibao.kotlin.springboot.servletstack.configuration.BlogProperties
 import com.laibao.kotlin.springboot.servletstack.entity.Article
 import com.laibao.kotlin.springboot.servletstack.entity.User
 import com.laibao.kotlin.springboot.servletstack.extensions.format

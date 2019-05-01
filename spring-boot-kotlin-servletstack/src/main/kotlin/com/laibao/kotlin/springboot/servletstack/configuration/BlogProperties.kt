@@ -1,4 +1,4 @@
-package com.laibao.kotlin.springboot.blog.configuration
+package com.laibao.kotlin.springboot.servletstack.configuration
 
 import org.springframework.boot.context.properties.ConfigurationProperties
 

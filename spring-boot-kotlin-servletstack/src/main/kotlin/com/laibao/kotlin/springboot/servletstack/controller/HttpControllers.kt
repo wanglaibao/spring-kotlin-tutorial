@@ -1,4 +1,4 @@
-package com.laibao.kotlin.springboot.blog.controller
+package com.laibao.kotlin.springboot.servletstack.controller
 
 import com.laibao.kotlin.springboot.servletstack.repository.ArticleRepository
 import com.laibao.kotlin.springboot.servletstack.repository.UserRepository
