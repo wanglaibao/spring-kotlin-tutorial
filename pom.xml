@@ -76,41 +76,41 @@
           <scope>test</scope>
       </dependency>
 
-        <dependency>
-            <groupId>org.jetbrains.kotlinx</groupId>
-            <artifactId>kotlinx-coroutines-jdk8</artifactId>
-            <version>${kotlinx.coroutines.version}</version>
-        </dependency>
+      <dependency>
+          <groupId>org.jetbrains.kotlinx</groupId>
+          <artifactId>kotlinx-coroutines-jdk8</artifactId>
+          <version>${kotlinx.coroutines.version}</version>
+      </dependency>
 
-        <dependency>
-            <groupId>org.jetbrains.kotlinx</groupId>
-            <artifactId>kotlinx-coroutines-core-common</artifactId>
-            <version>${kotlinx.coroutines.version}</version>
-        </dependency>
+      <dependency>
+          <groupId>org.jetbrains.kotlinx</groupId>
+          <artifactId>kotlinx-coroutines-core-common</artifactId>
+          <version>${kotlinx.coroutines.version}</version>
+      </dependency>
 
-        <dependency>
-            <groupId>org.jetbrains.kotlinx</groupId>
-            <artifactId>kotlinx-coroutines-core</artifactId>
-            <version>${kotlinx.coroutines.version}</version>
-        </dependency>
+      <dependency>
+          <groupId>org.jetbrains.kotlinx</groupId>
+          <artifactId>kotlinx-coroutines-core</artifactId>
+          <version>${kotlinx.coroutines.version}</version>
+      </dependency>
 
-        <dependency>
-            <groupId>org.jetbrains.kotlinx</groupId>
-            <artifactId>kotlinx-coroutines-reactive</artifactId>
-            <version>${kotlinx.coroutines.version}</version>
-        </dependency>
+      <dependency>
+          <groupId>org.jetbrains.kotlinx</groupId>
+          <artifactId>kotlinx-coroutines-reactive</artifactId>
+          <version>${kotlinx.coroutines.version}</version>
+      </dependency>
 
-        <dependency>
-            <groupId>org.jetbrains.kotlinx</groupId>
-            <artifactId>kotlinx-coroutines-rx2</artifactId>
-            <version>${kotlinx.coroutines.version}</version>
-        </dependency>
+      <dependency>
+          <groupId>org.jetbrains.kotlinx</groupId>
+          <artifactId>kotlinx-coroutines-reactor</artifactId>
+          <version>${kotlinx.coroutines.version}</version>
+      </dependency>
 
-        <dependency>
-            <groupId>org.jetbrains.kotlinx</groupId>
-            <artifactId>kotlinx-coroutines-reactor</artifactId>
-            <version>${kotlinx.coroutines.version}</version>
-        </dependency>
+      <dependency>
+          <groupId>org.jetbrains.kotlinx</groupId>
+          <artifactId>kotlinx-coroutines-rx2</artifactId>
+          <version>${kotlinx.coroutines.version}</version>
+      </dependency>
     </dependencies>
          
     <build>
@@ -153,9 +153,19 @@
             </plugin>
 
             <plugin>
-                <artifactId>kotlin-maven-plugin</artifactId>
                 <groupId>org.jetbrains.kotlin</groupId>
+                <artifactId>kotlin-maven-plugin</artifactId>
                 <version>${kotlin.version}</version>
+                <configuration>
+                    <jvmTarget>${java.version}</jvmTarget>
+                    <javaParameters>true</javaParameters>
+                    <args>
+                        <arg>-Xjsr305=strict</arg>
+                    </args>
+                    <compilerPlugins>
+                        <plugin>spring</plugin>
+                    </compilerPlugins>
+                </configuration>
                 <executions>
                     <execution>
                         <id>compile</id>
@@ -183,11 +193,46 @@
                         </configuration>
                     </execution>
                 </executions>
+                <!--
                 <configuration>
                     <jvmTarget>${java.version}</jvmTarget>
                     <javaParameters>true</javaParameters>
                 </configuration>
+                -->
+                <dependencies>
+                    <dependency>
+                        <groupId>org.jetbrains.kotlin</groupId>
+                        <artifactId>kotlin-maven-allopen</artifactId>
+                        <version>${kotlin.version}</version>
+                    </dependency>
+                </dependencies>
             </plugin>
+
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <!--
+            <plugin>
+                <groupId>org.jetbrains.kotlin</groupId>
+                <artifactId>kotlin-maven-plugin</artifactId>
+                <configuration>
+                    <args>
+                        <arg>-Xjsr305=strict</arg>
+                    </args>
+                    <compilerPlugins>
+                        <plugin>spring</plugin>
+                    </compilerPlugins>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.jetbrains.kotlin</groupId>
+                        <artifactId>kotlin-maven-allopen</artifactId>
+                        <version>${kotlin.version}</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+            -->
         </plugins>
     </build>
 </project>
