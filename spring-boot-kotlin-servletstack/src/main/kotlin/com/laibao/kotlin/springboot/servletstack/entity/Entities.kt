@@ -29,4 +29,11 @@ class User(
         var description: String? = null,
         @Id @GeneratedValue var id: Long? = null)
 
+@Entity
+data class Customer(
+        val firstName: String = "",
+        val lastName: String = "",
+        @Id @GeneratedValue
+        val id: Long = -1)
+
 
